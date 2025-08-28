@@ -34,6 +34,8 @@ var av_chns = [0x0d, 0x0e];
 
 function milesightDeviceDecode(bytes) {
     var decoded = {};
+    decoded.devEUI = LoRaObject.devEUI;
+    decoded.devName = LoRaObject.deviceName;
 
     for (var i = 0; i < bytes.length; ) {
         var channel_id = bytes[i++];
